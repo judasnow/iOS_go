@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:quiz/quiz.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:matchismo/matchismo.xcodeproj">
    </FileRef>
    <FileRef

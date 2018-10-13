@@ -12,6 +12,16 @@
 		8FD416FB216BAA26000142AE /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD416FA216BAA26000142AE /* BNRItem.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8F8015DA2172210D00DDA266 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F8015D62172210D00DDA266 /* quiz.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8F8015BD217220BF00DDA266;
+			remoteInfo = quiz;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		506B86B2214E04390017E899 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -29,6 +39,7 @@
 		506B86B7214E04390017E899 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		508E9C6D215880B000527C74 /* Fraction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Fraction.m; sourceTree = "<group>"; };
 		508E9C6F215880D100527C74 /* Fraction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = "<group>"; };
+		8F8015D62172210D00DDA266 /* quiz.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = quiz.xcodeproj; path = ../quiz/quiz.xcodeproj; sourceTree = "<group>"; };
 		8FD416FA216BAA26000142AE /* BNRItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
 		8FD416FC216BABF9000142AE /* BNRItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRItem.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,6 +58,7 @@
 		506B86AB214E04390017E899 = {
 			isa = PBXGroup;
 			children = (
+				8F8015D62172210D00DDA266 /* quiz.xcodeproj */,
 				506B86B6214E04390017E899 /* objcgogogo */,
 				506B86B5214E04390017E899 /* Products */,
 			);
@@ -70,6 +82,14 @@
 				8FD416FA216BAA26000142AE /* BNRItem.m */,
 			);
 			path = objcgogogo;
+			sourceTree = "<group>";
+		};
+		8F8015D72172210D00DDA266 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F8015DB2172210D00DDA266 /* quiz.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,12 +136,28 @@
 			mainGroup = 506B86AB214E04390017E899;
 			productRefGroup = 506B86B5214E04390017E899 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8F8015D72172210D00DDA266 /* Products */;
+					ProjectRef = 8F8015D62172210D00DDA266 /* quiz.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				506B86B3214E04390017E899 /* objcgogogo */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8F8015DB2172210D00DDA266 /* quiz.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = quiz.app;
+			remoteRef = 8F8015DA2172210D00DDA266 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		506B86B0214E04390017E899 /* Sources */ = {
