@@ -15,10 +15,11 @@
 
 @implementation AppDelegate
 
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application
+    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    self.window = [[UIWindow alloc] init];
+    self.window = [[UIWindow alloc] initWithFrame:
+                   [[UIScreen mainScreen] bounds]];
     
     // 现阶段 view 必须设置 vc
     NSArray *windows = [[UIApplication sharedApplication] windows];
@@ -30,16 +31,18 @@
         }
     }
 
-    CGRect firstFrame = CGRectMake(160, 240, 100, 150);
+//    CGRect firstFrame = CGRectMake(160, 240, 100, 150);
+    // frame 和 bounds 的区别
+    CGRect firstFrame = self.window.bounds;
     HypnosisView *firstView = [[HypnosisView alloc] initWithFrame:firstFrame];
     
     firstView.backgroundColor = [UIColor redColor];
     [self.window addSubview:firstView];
     
-    CGRect secondFrame = CGRectMake(20, 30, 50, 50);
-    HypnosisView *secondView = [[HypnosisView alloc] initWithFrame:secondFrame];
-    secondView.backgroundColor = [UIColor blueColor];
-    [firstView addSubview:secondView];
+//    CGRect secondFrame = CGRectMake(20, 30, 50, 50);
+//    HypnosisView *secondView = [[HypnosisView alloc] initWithFrame:secondFrame];
+//    secondView.backgroundColor = [UIColor blueColor];
+//    [firstView addSubview:secondView];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
