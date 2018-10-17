@@ -10,14 +10,16 @@
 
 @interface QuizViewController ()
 
+// IBOutlet 只是一个 xcode 使用的标识
+@property (nonatomic, weak) IBOutlet UILabel *questionLabel;
+@property (nonatomic, weak) IBOutlet UILabel *answerLabel;
+
 @end
 
 @implementation QuizViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
-
 
 @end

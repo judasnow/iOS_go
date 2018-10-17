@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuizViewController">
             <connections>
+                <outlet property="answerLabel" destination="uji-b4-bO8" id="C8c-Au-kr7"/>
+                <outlet property="questionLabel" destination="vM6-mP-kBS" id="UxR-2y-lyC"/>
                 <outlet property="view" destination="iN0-l3-epB" id="uxd-H4-1Sv"/>
             </connections>
         </placeholder>
@@ -50,7 +52,7 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="-1047.2" y="-358.4707646176912"/>
+            <point key="canvasLocation" x="-3543" y="-596"/>
         </view>
     </objects>
 </document>
