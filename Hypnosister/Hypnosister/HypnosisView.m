@@ -8,6 +8,12 @@
 
 #import "HypnosisView.h"
 
+@interface HypnosisView()
+
+@property (strong, nonatomic) UIColor *circleColor;
+
+@end
+
 @implementation HypnosisView
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -15,8 +21,15 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
+        self.circleColor = [UIColor redColor];
     }
     return self;
+}
+
+// 用户触摸屏幕时触发
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"%@ was touched", self);
 }
 
 - (void)drawRect:(CGRect)rect
@@ -41,7 +54,7 @@
     }
 
     [path setLineWidth:10];
-    [[UIColor lightGrayColor] setStroke];
+    [self.circleColor setStroke];
     [path stroke];
 }
 
