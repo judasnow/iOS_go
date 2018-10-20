@@ -21,15 +21,31 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
-        self.circleColor = [UIColor redColor];
+        self.circleColor = [UIColor lightGrayColor];
     }
     return self;
+}
+
+- (void)setCircleColor:(UIColor *)circleColor
+{
+    _circleColor = circleColor;
+    // 手动发布消息，触发界面的刷新
+    [self setNeedsDisplay];
 }
 
 // 用户触摸屏幕时触发
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     NSLog(@"%@ was touched", self);
+    float red = (arc4random() % 100) / 100.0;
+    float green = (arc4random() % 100) / 100.0;
+    float blue = (arc4random() % 100) / 100.0;
+    
+    UIColor *randomColor = [UIColor colorWithRed:red
+                                           green:green
+                                            blue:blue
+                                           alpha:1.0];
+    self.circleColor = randomColor;
 }
 
 - (void)drawRect:(CGRect)rect
