@@ -68,7 +68,6 @@
     [scrollView addSubview:anotherView];
     
     scrollView.contentSize = bigRect.size;
-    
 
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
