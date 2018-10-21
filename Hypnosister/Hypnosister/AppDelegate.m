@@ -33,16 +33,28 @@
 
 //    CGRect firstFrame = CGRectMake(160, 240, 100, 150);
     // frame 和 bounds 的区别
-    CGRect firstFrame = self.window.bounds;
-    HypnosisView *firstView = [[HypnosisView alloc] initWithFrame:firstFrame];
+//    CGRect firstFrame = self.window.bounds;
+//    HypnosisView *firstView = [[HypnosisView alloc] initWithFrame:firstFrame];
     
 //    firstView.backgroundColor = [UIColor redColor];
-    [self.window.rootViewController.view addSubview:firstView];
+//    [self.window.rootViewController.view addSubview:firstView];
     
 //    CGRect secondFrame = CGRectMake(20, 30, 50, 50);
 //    HypnosisView *secondView = [[HypnosisView alloc] initWithFrame:secondFrame];
 //    secondView.backgroundColor = [UIColor blueColor];
 //    [firstView addSubview:secondView];
+    
+    CGRect screenRect = self.window.bounds;
+    CGRect bigRect = screenRect;
+    bigRect.size.width *= 2.0;
+    bigRect.size.height *= 2.0;
+    
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:screenRect];
+    [self.window addSubview:scrollView];
+    
+    HypnosisView *hypnosisView = [[HypnosisView alloc] initWithFrame:bigRect];
+    [scrollView addSubview:hypnosisView];
+    scrollView.contentSize = bigRect.size;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
