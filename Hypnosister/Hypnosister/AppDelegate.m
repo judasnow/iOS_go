@@ -17,6 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:
                    [[UIScreen mainScreen] bounds]];
@@ -47,15 +48,28 @@
     CGRect screenRect = self.window.bounds;
     CGRect bigRect = screenRect;
     bigRect.size.width *= 2.0;
-    bigRect.size.height *= 2.0;
+//    bigRect.size.height *= 2.0;
     
-    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:screenRect];
-    [self.window addSubview:scrollView];
+    // scrollView 是全屏的
+    UIScrollView *scrollView = [[UIScrollView alloc]
+                                initWithFrame:screenRect];
+    [scrollView setPagingEnabled:YES];
+//    [self.window addSubview:scrollView];
+    [self.window.rootViewController.view addSubview:scrollView];
     
-    HypnosisView *hypnosisView = [[HypnosisView alloc] initWithFrame:bigRect];
+//    HypnosisView *hypnosisView = [[HypnosisView alloc] initWithFrame:bigRect];
+    HypnosisView *hypnosisView = [[HypnosisView alloc]
+                                  initWithFrame:screenRect];
     [scrollView addSubview:hypnosisView];
+    
+    screenRect.origin.x += screenRect.size.width;
+    HypnosisView *anotherView = [[HypnosisView alloc]
+                                 initWithFrame:screenRect];
+    [scrollView addSubview:anotherView];
+    
     scrollView.contentSize = bigRect.size;
     
+
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
