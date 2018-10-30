@@ -9,7 +9,7 @@
 #import "ItemStore.h"
 #import "Item.h"
 
-// 这里有一个单例模式的实例
+// 这里是一个单例模式
 
 @interface ItemStore()
 
@@ -30,7 +30,7 @@
 
 - (instancetype)init
 {
-    @throw [NSException exceptionWithName:@"singletopn"
+    @throw [NSException exceptionWithName:@"Singletopn"
                                    reason:@"use shareStore"
                                  userInfo:nil];
 }

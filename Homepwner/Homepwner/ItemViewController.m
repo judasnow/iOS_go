@@ -17,7 +17,7 @@
     self = [super initWithStyle:UITableViewStylePlain];
     
     if (self) {
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 2; i++) {
             [[ItemStore sharedStore] createItem];
         }
     }
@@ -25,7 +25,17 @@
     return self;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+//- (instancetype)initWithStyle:(UITableViewStyle)style
+//{
+//    return [self init];
+//}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [[[ItemStore sharedStore] allItems] count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"
                                                             forIndexPath:indexPath];
@@ -34,11 +44,6 @@
     
     cell.textLabel.text = [item desc];
     return cell;
-}
-
-- (instancetype)initWithStyle:(UITableViewStyle)style
-{
-    return [self init];
 }
 
 - (void)viewDidLoad
