@@ -25,10 +25,10 @@
     return self;
 }
 
-//- (instancetype)initWithStyle:(UITableViewStyle)style
-//{
-//    return [self init];
-//}
+- (instancetype)initWithStyle:(UITableViewStyle)style
+{
+    return [self init];
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {

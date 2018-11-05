@@ -9,4 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ItemViewController : UITableViewController
+
+@property (nonatomic, strong) IBOutlet UIView *headerView;
+
 @end
